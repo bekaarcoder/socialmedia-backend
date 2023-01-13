@@ -18,12 +18,9 @@ import "express-async-errors";
 import helmet from "helmet";
 import compression from "compression";
 import { Logger } from "winston";
-import { config } from "./config";
-import appRoutes from "./routes";
-import {
-    CustomError,
-    IErrorResponse,
-} from "./shared/globals/helpers/error-handler";
+import { config } from "@root/config";
+import appRoutes from "@root/routes";
+import { CustomError, IErrorResponse } from "@global/helpers/error-handler";
 
 const SERVER_PORT = 8000;
 const log: Logger = config.createLogger("server");
